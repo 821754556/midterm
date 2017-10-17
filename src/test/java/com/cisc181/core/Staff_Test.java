@@ -22,46 +22,46 @@ public class Staff_Test {
 
 	@Test
 	public void AverageSalaryTest() {
-		ArrayList<Staff> StaffMember = new ArrayList<Staff>();
-		Staff staff1 = new Staff(eTitle.MR);
-		Staff staff2 = new Staff(eTitle.MRS);
-		Staff staff3 = new Staff(eTitle.MS);
-		Staff staff4 = new Staff(eTitle.MR);
-		Staff staff5 = new Staff(eTitle.MRS);
+		ArrayList<Staff> m = new ArrayList<Staff>();
+		Staff s1 = new Staff(eTitle.MRS);
+		Staff s2 = new Staff(eTitle.MRS);
+		Staff s3 = new Staff(eTitle.MS);
+		Staff s4 = new Staff(eTitle.MS);
+		Staff s5 = new Staff(eTitle.MR);
 
-		staff1.setSalary(1);
-		staff2.setSalary(2);
-		staff3.setSalary(3);
-		staff4.setSalary(4);
-		staff5.setSalary(5);
+		s1.setSalary(1);
+		s2.setSalary(2);
+		s3.setSalary(3);
+		s4.setSalary(4);
+		s5.setSalary(5);
 
-		StaffMember.add(staff1);
-		StaffMember.add(staff2);
-		StaffMember.add(staff3);
-		StaffMember.add(staff4);
-		StaffMember.add(staff5);
+		m.add(s1);
+		m.add(s2);
+		m.add(s3);
+		m.add(s4);
+		m.add(s5);
 		double AverageSalary = 0;
-		for (Staff staff : StaffMember) {
+		for (Staff staff : m) {
 			AverageSalary += staff.getSalary();
 		}
-		assertEquals(AverageSalary / StaffMember.size() , 3,DELTA);
+		assertEquals(AverageSalary / m.size() , 3,DELTA);
 	}
 
 	@Test(expected = PersonException.class)
 	public void InvalidDOBAndPhoneNoTest1() throws PersonException {
-			Staff staff = new Staff("Zuyue", "", "xie",new Date(1900,1,12), "address", "1234567890", "emailaddress",
+			Staff staff = new Staff("sadsasd", "", "sadas",new Date(1900,1,12), "address", "123456789454340", "dassads",
 					"2-9", 4, 1, new Date(2000, 12, 12), eTitle.MR);
 
 	}
 	@Test(expected = PersonException.class)
 	public void InvalidDOBAndPhoneNoTest2() throws PersonException {
-			Staff staff = new Staff("Zuyue", "", "xie",new Date(2000, 1, 12), "address", "123456789", "emailaddress",
+			Staff staff = new Staff("fdsfa", "", "efe",new Date(2000, 1, 12), "address", "12345645435232412789", "sdasdsaas",
 					"2-9", 4, 1, new Date(2000, 12, 12), eTitle.MR);
 }
 	@Test(expected = IllegalArgumentException.class)
 	public void BornInTheFutureTest() throws IllegalArgumentException, PersonException {
 
-			Staff staff = new Staff("Zuyue", "", "xie",new Date(2099, 1, 12), "address", "1234567890", "emailaddress",
+			Staff staff = new Staff("Zuyue", "", "xie",new Date(2099, 1, 12), "address", "1234567890", "sdassaassasa",
 					"2-9", 4, 1, new Date(2000, 12, 12), eTitle.MR);
 
 }

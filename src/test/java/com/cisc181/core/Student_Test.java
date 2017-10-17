@@ -44,26 +44,26 @@ public class Student_Test {
 		Section section2 = new Section(UUID.randomUUID(), 222);
 		sections.add(section1);
 		sections.add(section2);
-		Student student1 = new Student("1A", "B", "C", new Date(2001, 1, 1), eMajor.COMPSI, "GeorgeRead201",
-				"3021111111", "1A@udel.edu");
-		Student student2 = new Student("2B", "B", "C", new Date(2002, 1, 1), eMajor.BUSINESS, "GeorgeRead202",
-				"3021111112", "2B@udel.edu");
-		Student student3 = new Student("3C", "B", "C", new Date(2003, 1, 1), eMajor.CHEM, "GeorgeRead203", "3021111113",
-				"3C@udel.edu");
-		Student student4 = new Student("4D", "B", "C", new Date(2004, 1, 1), eMajor.NURSING, "GeorgeRead204",
-				"3021111114", "4D@udel.edu");
-		Student student5 = new Student("5E", "B", "C", new Date(2005, 1, 1), eMajor.PHYSICS, "GeorgeRead205",
-				"3021111115", "5E@udel.edu");
-		Student student6 = new Student("6F", "B", "C", new Date(2006, 1, 1), eMajor.COMPSI, "GeorgeRead206",
-				"3021111116", "6F@udel.edu");
-		Student student7 = new Student("7G", "B", "C", new Date(2007, 1, 1), eMajor.BUSINESS, "GeorgeRead207",
-				"3021111117", "7G@udel.edu");
-		Student student8 = new Student("8H", "B", "C", new Date(2008, 1, 1), eMajor.CHEM, "GeorgeRead208", "3021111118",
-				"8H@udel.edu");
-		Student student9 = new Student("9I", "B", "C", new Date(2009, 1, 1), eMajor.NURSING, "GeorgeRead209",
-				"3021111119", "9I@udel.edu");
-		Student student10 = new Student("0J", "B", "C", new Date(2010, 1, 1), eMajor.PHYSICS, "GeorgeRead210",
-				"3021111120", "10J@udel.edu");
+		Student student1 = new Student("带", "哥", "个", new Date(1995, 1, 1), eMajor.COMPSI, "weqeqwe",
+				"3026099554398", "gdfgfdg@udel.edu");
+		Student student2 = new Student("你", "吗", "怕", new Date(2005, 1, 1), eMajor.BUSINESS, "weqwwqwqew",
+				"3021111112", "gfdgfdgd@udel.edu");
+		Student student3 = new Student("干死你", "傻吊", "干", new Date(1994, 1, 1), eMajor.CHEM, "weqweqw", "3021111113",
+				"sddsgsd@udel.edu");
+		Student student4 = new Student("擦", "个", "哦", new Date(2001, 1, 1), eMajor.NURSING, "erwerweerwer",
+				"3021111114", "fdgfdgfd@udel.edu");
+		Student student5 = new Student("嗯", "啪啪啪", "的", new Date(2005, 1, 1), eMajor.PHYSICS, "fgdgfddgfgfd",
+				"3021111115", "gsdgdd@udel.edu");
+		Student student6 = new Student("的", "人", "人", new Date(2006, 1, 1), eMajor.COMPSI, "fgdgfdgfdgdfg",
+				"3021111116", "erwerew@udel.edu");
+		Student student7 = new Student("发", "额", "人", new Date(2005, 1, 1), eMajor.BUSINESS, "fdgfdgfgfdgd",
+				"3021111117", "hfdhfd@udel.edu");
+		Student student8 = new Student("人", "个", "怕", new Date(2009, 1, 1), eMajor.CHEM, "fdgfdgfdgfgdf", "3021111118",
+				"rdfgdg@udel.edu");
+		Student student9 = new Student("人", "日", "他", new Date(2012, 1, 1), eMajor.NURSING, "fgfdgfdgfgdgf",
+				"3021111119", "ewtgdewr@udel.edu");
+		Student student10 = new Student("t", "r", "额", new Date(1999, 1, 1), eMajor.PHYSICS, "gdfgdfgdfgdfg",
+				"3021111120", "hewerewe@udel.edu");
 		students.add(student1);
 		students.add(student2);
 		students.add(student3);
@@ -78,7 +78,7 @@ public class Student_Test {
 
 	@Test
 	public void StudentEnrollmentTest() {
-		ArrayList<Section> Year2016 = new ArrayList<Section>();
+		ArrayList<Section> Year2017 = new ArrayList<Section>();
 		for (Semester semester : semesters) {
 			for (Course course : courses) {
 				for (Section section : sections) {
@@ -88,12 +88,12 @@ public class Student_Test {
 					section.setCourseID(course.getCourseID());
 					section.setCourseName(course.getCourseName());
 					section.setGradePoints(course.getGradePoints());
-					Year2016.add(section);
+					Year2017.add(section);
 				}
 			}
 		}
 
-		for (Section section : Year2016) {
+		for (Section section : Year2017) {
 			for (Student st : students) {
 				section.EnrollStudentInToSection(st);
 			}
@@ -183,4 +183,4 @@ public class Student_Test {
 		assertEquals(students.get(6).getMajor(), eMajor.NURSING);
 	}
 
-}
+}  
