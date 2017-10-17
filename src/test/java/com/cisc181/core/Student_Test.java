@@ -35,35 +35,35 @@ public class Student_Test {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws PersonException {
-		semesters.add(new Semester(UUID.randomUUID(), new Date(2012, 9, 1), new Date(2016, 12, 24)));
-		semesters.add(new Semester(UUID.randomUUID(), new Date(2012, 2, 8), new Date(2016, 5, 27)));
-		courses.add(new Course(UUID.randomUUID(), "MATH", 0));
-		courses.add(new Course(UUID.randomUUID(), "CHEM", 0));
-		courses.add(new Course(UUID.randomUUID(), "JAPN", 0));
+		semesters.add(new Semester(UUID.randomUUID(), new Date(2017, 9, 1), new Date(2017, 12, 24)));
+		semesters.add(new Semester(UUID.randomUUID(), new Date(2018, 2, 8), new Date(2018, 5, 27)));
+		courses.add(new Course(UUID.randomUUID(), "CHIN", 10));
+		courses.add(new Course(UUID.randomUUID(), "CHEM", 10));
+		courses.add(new Course(UUID.randomUUID(), "MATH", 10));
 		Section section1 = new Section(UUID.randomUUID(), 221);
 		Section section2 = new Section(UUID.randomUUID(), 222);
 		sections.add(section1);
 		sections.add(section2);
-		Student student1 = new Student("带", "哥", "个", new Date(1995, 1, 1), eMajor.COMPSI, "weqeqwe",
-				"3026099554398", "gdfgfdg@udel.edu");
-		Student student2 = new Student("你", "吗", "怕", new Date(2005, 1, 1), eMajor.BUSINESS, "weqwwqwqew",
-				"3021111112", "gfdgfdgd@udel.edu");
-		Student student3 = new Student("干死你", "傻吊", "干", new Date(1994, 1, 1), eMajor.CHEM, "weqweqw", "3021111113",
-				"sddsgsd@udel.edu");
-		Student student4 = new Student("擦", "个", "哦", new Date(2001, 1, 1), eMajor.NURSING, "erwerweerwer",
-				"3021111114", "fdgfdgfd@udel.edu");
-		Student student5 = new Student("嗯", "啪啪啪", "的", new Date(2005, 1, 1), eMajor.PHYSICS, "fgdgfddgfgfd",
-				"3021111115", "gsdgdd@udel.edu");
-		Student student6 = new Student("的", "人", "人", new Date(2006, 1, 1), eMajor.COMPSI, "fgdgfdgfdgdfg",
-				"3021111116", "erwerew@udel.edu");
-		Student student7 = new Student("发", "额", "人", new Date(2005, 1, 1), eMajor.BUSINESS, "fdgfdgfgfdgd",
-				"3021111117", "hfdhfd@udel.edu");
-		Student student8 = new Student("人", "个", "怕", new Date(2009, 1, 1), eMajor.CHEM, "fdgfdgfdgfgdf", "3021111118",
-				"rdfgdg@udel.edu");
-		Student student9 = new Student("人", "日", "他", new Date(2012, 1, 1), eMajor.NURSING, "fgfdgfdgfgdgf",
-				"3021111119", "ewtgdewr@udel.edu");
-		Student student10 = new Student("t", "r", "额", new Date(1999, 1, 1), eMajor.PHYSICS, "gdfgdfgdfgdfg",
-				"3021111120", "hewerewe@udel.edu");
+		Student student1 = new Student("sad", "Bs", "Ca", new Date(1999, 1, 11), eMajor.COMPSI, "dgfdgfgdfgg",
+				"3021111111", "1ytyytA@udel.edu");
+		Student student2 = new Student("2Bs", "Bs", "Ca", new Date(1998, 1, 21), eMajor.BUSINESS, "fgfgdg",
+				"3021111112", "2rrB@udel.edu");
+		Student student3 = new Student("3sC", "Ba", "Ca", new Date(1997, 1, 13), eMajor.CHEM, "Gfgdfgd", "3021411113",
+				"3C@udel.edu");
+		Student student4 = new Student("4gdD", "Bg", "Ceref", new Date(2004, 1, 14), eMajor.NURSING, "Gefdgdgd04",
+				"3021111114", "4trD@udel.edu");
+		Student student5 = new Student("5dE", "Bd", "dC", new Date(2004, 1, 12), eMajor.PHYSICS, "Gefoff", "3021111118",
+				"8H@udel.edu");
+		Student student6 = new Student("d6F", "Bd", "Cd", new Date(2006, 1, 12), eMajor.COMPSI, "GefforfgeRffadff206",
+				"3021111116", "6F@udel.edu");
+		Student student7 = new Student("7dG", "Bd", "derererC", new Date(2007, 1, 12), eMajor.BUSINESS, "GeorgeffReffd20f7",
+				"3021111117", "7G@udel.edu");
+		Student student8 = new Student("8Hd", "Bd", "Cererd", new Date(2008, 1, 13), eMajor.CHEM, "GeorgeRead208", "3021111118",
+				"8H@udel.edu");
+		Student student9 = new Student("9Ids", "Bd", "Cd", new Date(2009, 1, 15), eMajor.NURSING, "GeorddfsfsReadsdf", "3021111118",
+				"8H@udel.edu");
+		Student student10 = new Student("0dJ", "dB", "dC", new Date(2010, 1, 13), eMajor.PHYSICS, "GeorgeRfdssfeasfsfd210",
+				"3021111120", "10ddJ@udel.edu");
 		students.add(student1);
 		students.add(student2);
 		students.add(student3);
@@ -98,15 +98,7 @@ public class Student_Test {
 				section.EnrollStudentInToSection(st);
 			}
 		}
-		// 10 students in total,each of them have to take 12 sections' courses
-		// set the grade by random number from 1 - 100
-		// and calculate the GPA of him/her.
-		// all the course are considered the same credit
-		// Standard is 91-100A 81-90B 71-80C 51-70D 0-50F
-		// A is 4.0 B is 3.1 C is 2.2 D is 1.3, F is 0
-		// the GPA formula i use is the point they get / 12
-
-		// the score of students are given below
+		 
 		int[][] matrix = new int[10][12];
 		for (int row = 0; row <= 9; row++) {
 			for (int col = 0; col <= 11; col++) {
@@ -136,13 +128,10 @@ public class Student_Test {
 		}
 		float GPA2 = totalb / 12;
 		totalb = 0;
-		// people can do different assert test
-		// based on this method
+		 
 		setrow(9);
 		assertEquals(GPA, GPA2, DELTA);
-		// end of the GPA test
-
-		// start of the course grade test
+		 
 		int totalc = 0;
 		for (int row0 = 0; row0 <= 9; row0++) {
 			if (matrix[row0][col] <= 100 && matrix[row0][col] >= 91) {
@@ -169,18 +158,5 @@ public class Student_Test {
 		assertEquals(average_grade, average_gradeb, DELTA);
 	}
 
-	@Test
-	public void ChangeMajorTest1() {
-		assertEquals(students.get(0).getMajor(), eMajor.COMPSI);
-		students.get(0).setMajor(eMajor.BUSINESS);
-		assertEquals(students.get(0).getMajor(), eMajor.BUSINESS);
-	}
-
-	@Test
-	public void ChangeMajorTest2() {
-		assertEquals(students.get(6).getMajor(), eMajor.BUSINESS);
-		students.get(6).setMajor(eMajor.NURSING);
-		assertEquals(students.get(6).getMajor(), eMajor.NURSING);
-	}
-
-}  
+	 
+}
