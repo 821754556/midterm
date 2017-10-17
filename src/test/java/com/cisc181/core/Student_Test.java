@@ -1,4 +1,4 @@
-package com.cisc181.core;
+  package com.cisc181.core;
 
 import static org.junit.Assert.*;
 
@@ -130,6 +130,7 @@ public class Student_Test {
 		totalb = 0;
 		 
 		setrow(9);
+		// test GPA
 		assertEquals(GPA, GPA2, DELTA);
 		 
 		int totalc = 0;
@@ -155,6 +156,7 @@ public class Student_Test {
 		float average_gradeb = total_grade / 10;
 		total_grade = 0;
 		setcol(7);
+		// test average GPA
 		assertEquals(average_grade, average_gradeb, DELTA);
 	}
 
